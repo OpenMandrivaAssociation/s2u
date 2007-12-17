@@ -6,7 +6,6 @@ URL: http://www.mandrivalinux.com/
 Source0: %{name}-%{version}.tar.bz2
 License: GPL
 Group: Graphical desktop/Other
-BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildRequires: dbus-glib-devel
 BuildRequires: gtk+2-devel
 Requires: dbus
