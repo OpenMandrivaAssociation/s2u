@@ -1,9 +1,10 @@
 Summary: System to user tools
 Name: s2u
 Version: 0.8
-Release: %mkrel 2
+Release: %mkrel 3
 URL: http://www.mandrivalinux.com/
 Source0: %{name}-%{version}.tar.bz2
+Patch0: s2u-0.8-LDFLAGS.diff
 License: GPL
 Group: Graphical desktop/Other
 BuildRoot: %{_tmppath}/%{name}-buildroot
@@ -17,9 +18,10 @@ Use dbus to communicate between from the system to the users.
 
 %prep
 %setup -q
+%patch0 -p0 -b .LDFLAGS
 
 %build
-%make CFLAGS="$RPM_OPT_FLAGS"
+%make CFLAGS="%{optflags}" LDFLAGS="%{ldflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
