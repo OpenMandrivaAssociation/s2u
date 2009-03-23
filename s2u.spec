@@ -9,7 +9,7 @@ Group: Graphical desktop/Other
 BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildRequires: dbus-glib-devel
 BuildRequires: gtk+2-devel
-BuildRequires: libnotify1-devel
+BuildRequires: libnotify-devel
 Requires: dbus
 Requires: initscripts >= 7.06-52mdk
 Requires: libnotify1
