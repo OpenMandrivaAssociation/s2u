@@ -1,24 +1,24 @@
 Summary: System to user tools
 Name: s2u
-Version: 0.8
-Release: %mkrel 3
+Version: 0.9
+Release: %mkrel 1
 URL: http://www.mandrivalinux.com/
 Source0: %{name}-%{version}.tar.bz2
-Patch0: s2u-0.8-LDFLAGS.diff
 License: GPL
 Group: Graphical desktop/Other
 BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildRequires: dbus-glib-devel
 BuildRequires: gtk+2-devel
+BuildRequires: libnotify1-devel
 Requires: dbus
 Requires: initscripts >= 7.06-52mdk
+Requires: libnotify1
 
 %description
 Use dbus to communicate between from the system to the users.
 
 %prep
 %setup -q
-%patch0 -p0 -b .LDFLAGS
 
 %build
 %make CFLAGS="%{optflags}" LDFLAGS="%{ldflags}"
