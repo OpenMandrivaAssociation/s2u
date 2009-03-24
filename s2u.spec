@@ -1,7 +1,7 @@
 Summary: System to user tools
 Name: s2u
 Version: 0.9
-Release: %mkrel 1
+Release: %mkrel 2
 URL: http://www.mandrivalinux.com/
 Source0: %{name}-%{version}.tar.bz2
 License: GPL
@@ -12,7 +12,6 @@ BuildRequires: gtk+2-devel
 BuildRequires: libnotify-devel
 Requires: dbus
 Requires: initscripts >= 7.06-52mdk
-Requires: libnotify1
 
 %description
 Use dbus to communicate between from the system to the users.
