@@ -1,7 +1,7 @@
 Summary: System to user tools
 Name: s2u
-Version: 0.9.1
-Release: %mkrel 3
+Version: 0.9.2
+Release: %mkrel 1
 URL: http://www.mandrivalinux.com/
 Source0: %{name}-%{version}.tar.bz2
 License: GPL
