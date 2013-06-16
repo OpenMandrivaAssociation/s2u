@@ -1,18 +1,17 @@
-Summary: System to user tools
-Name: s2u
-Version: 0.9.2
-Release: %mkrel 3
-URL: http://www.mandrivalinux.com/
-Source0: %{name}-%{version}.tar.bz2
-Patch0: s2u-0.9.2-new-libnotify.patch
-License: GPLv2+
-Group: Graphical desktop/Other
-BuildRoot: %{_tmppath}/%{name}-buildroot
-BuildRequires: dbus-glib-devel
-BuildRequires: gtk+2-devel
-BuildRequires: libnotify-devel >= 0.7
-Requires: dbus
-Requires: initscripts >= 7.06-52mdk
+Summary:	System to user tools
+Name:		s2u
+Version:	0.9.2
+Release:	4
+URL:		http://www.mandrivalinux.com/
+Source0:	%{name}-%{version}.tar.bz2
+Patch0:		s2u-0.9.2-new-libnotify.patch
+License:	GPLv2+
+Group:		Graphical desktop/Other
+BuildRequires:	pkgconfig(dbus-glib-1)
+BuildRequires:	pkgconfig(gtk+-2.0)
+BuildRequires:	pkgconfig(libnotify)
+Requires:	dbus
+Requires:	initscripts >= 7.06-52mdk
 
 %description
 Use dbus to communicate between from the system to the users.
@@ -25,14 +24,9 @@ Use dbus to communicate between from the system to the users.
 %make CFLAGS="%{optflags}" LDFLAGS="%{ldflags}"
 
 %install
-rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
 %files
-%defattr(-,root,root)
 %doc ChangeLog README AUTHORS LICENSE
 %_bindir/s2u
 %_sysconfdir/X11/xinit.d/s2u
@@ -48,7 +42,7 @@ rm -rf $RPM_BUILD_ROOT
 * Mon Feb 20 2012 abf
 - The release updated by ABF
 
-* Wed Apr 06 2011 Götz Waschk <waschk@mandriva.org> 0.9.2-2mdv2011.0
+* Wed Apr 06 2011 GÃ¶tz Waschk <waschk@mandriva.org> 0.9.2-2mdv2011.0
 + Revision: 650899
 - patch for libnotify 0.7
 - update license
@@ -144,7 +138,7 @@ rm -rf $RPM_BUILD_ROOT
 - changes in cvs
 - use $DISPLAY in temp filename
 
-* Thu Aug 26 2004 G�tz Waschk <waschk@linux-mandrake.com> 0.2-2mdk
+* Thu Aug 26 2004 Götz Waschk <waschk@linux-mandrake.com> 0.2-2mdk
 - mark config files
 - fix file list
 - drop prefix
