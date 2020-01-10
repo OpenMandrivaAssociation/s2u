@@ -18,7 +18,7 @@ Use dbus to communicate between from the system to the users.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 %make CFLAGS="%{optflags}" LDFLAGS="%{ldflags}"
