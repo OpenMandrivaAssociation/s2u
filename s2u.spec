@@ -1,7 +1,7 @@
 Summary:	System to user tools
 Name:		s2u
 Version:	0.9.2
-Release:	16
+Release:	17
 URL:		http://www.mandrivalinux.com/
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		s2u-0.9.2-new-libnotify.patch
